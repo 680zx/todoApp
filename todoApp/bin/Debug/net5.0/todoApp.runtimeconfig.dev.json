@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/zx/.dotnet/store/|arch|/|tfm|",
-      "/home/zx/.nuget/packages"
+      "C:\\Users\\tvrbofx\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\tvrbofx\\.nuget\\packages"
     ]
   }
 }

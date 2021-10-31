@@ -6,6 +6,6 @@ namespace Entities
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public DateTime CreationTime { get; set; }
+        public DateTime NotificationTime { get; set; }
     }
 }
