@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/todoApp.Tests.csproj": {}
+  },
+  "projects": {
+    "/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/todoApp.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/todoApp.Tests.csproj",
+        "projectName": "todoApp.Tests",
+        "projectPath": "/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/todoApp.Tests.csproj",
+        "packagesPath": "/home/zx/.nuget/packages/",
+        "outputPath": "/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zx/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/zx/Documents/ProChallenges/todoApp/todoApp/todoApp.csproj": {
+                "projectPath": "/home/zx/Documents/ProChallenges/todoApp/todoApp/todoApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.0.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/zx/Documents/ProChallenges/todoApp/todoApp/todoApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zx/Documents/ProChallenges/todoApp/todoApp/todoApp.csproj",
+        "projectName": "todoApp",
+        "projectPath": "/home/zx/Documents/ProChallenges/todoApp/todoApp/todoApp.csproj",
+        "packagesPath": "/home/zx/.nuget/packages/",
+        "outputPath": "/home/zx/Documents/ProChallenges/todoApp/todoApp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zx/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

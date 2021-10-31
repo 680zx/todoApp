@@ -1,0 +1,16 @@
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/NUnit3.TestAdapter.dll
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/NUnit3.TestAdapter.pdb
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/nunit.engine.dll
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/nunit.engine.api.dll
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/nunit.engine.core.dll
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/testcentric.engine.metadata.dll
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/todoApp.Tests.deps.json
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/todoApp.Tests.dll
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/bin/Debug/netstandard2.1/todoApp.Tests.pdb
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/Debug/netstandard2.1/todoApp.Tests.csproj.AssemblyReference.cache
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/Debug/netstandard2.1/todoApp.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/Debug/netstandard2.1/todoApp.Tests.AssemblyInfoInputs.cache
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/Debug/netstandard2.1/todoApp.Tests.AssemblyInfo.cs
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/Debug/netstandard2.1/todoApp.Tests.csproj.CoreCompileInputs.cache
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/Debug/netstandard2.1/todoApp.Tests.dll
+/home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/obj/Debug/netstandard2.1/todoApp.Tests.pdb

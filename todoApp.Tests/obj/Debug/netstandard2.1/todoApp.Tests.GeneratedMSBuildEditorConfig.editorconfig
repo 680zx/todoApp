@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = todoApp.Tests
+build_property.ProjectDir = /home/zx/Documents/ProChallenges/todoApp/todoApp.Tests/
