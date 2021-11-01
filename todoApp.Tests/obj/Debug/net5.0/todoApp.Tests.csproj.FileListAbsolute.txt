@@ -209,3 +209,5 @@ D:\ProChallenges\todoApp\todoApp.Tests\obj\Debug\net5.0\todoApp.Tests.dll
 D:\ProChallenges\todoApp\todoApp.Tests\obj\Debug\net5.0\ref\todoApp.Tests.dll
 D:\ProChallenges\todoApp\todoApp.Tests\obj\Debug\net5.0\todoApp.Tests.pdb
 D:\ProChallenges\todoApp\todoApp.Tests\obj\Debug\net5.0\todoApp.Tests.genruntimeconfig.cache
+D:\ProChallenges\todoApp\todoApp.Tests\bin\Debug\net5.0\Castle.Core.dll
+D:\ProChallenges\todoApp\todoApp.Tests\bin\Debug\net5.0\Moq.dll

@@ -6,7 +6,7 @@ namespace Services
 {
     public class TaskCreator : ICreator
     {
-        public Task Create(string taskName, string taskDescription, DateTime taskTime)
+        public UserTask Create(string taskName, string taskDescription, DateTime taskTime)
         {
             if (taskName == null)
                 throw new ArgumentNullException(taskName, "Param [taskName] is null.");
@@ -17,7 +17,7 @@ namespace Services
             if (taskTime < DateTime.Now)
                 throw new ArgumentException(taskTime.ToString("G"), "The param [taskTime] is less than the current date time.");
 
-            return new Task
+            return new UserTask
             {
                 Name = taskName,
                 Description = taskDescription,

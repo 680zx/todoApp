@@ -21,7 +21,6 @@ D:\ProChallenges\todoApp\todoApp\bin\Debug\net5.0\todoApp.runtimeconfig.dev.json
 D:\ProChallenges\todoApp\todoApp\bin\Debug\net5.0\todoApp.dll
 D:\ProChallenges\todoApp\todoApp\bin\Debug\net5.0\ref\todoApp.dll
 D:\ProChallenges\todoApp\todoApp\bin\Debug\net5.0\todoApp.pdb
-D:\ProChallenges\todoApp\todoApp\obj\Debug\net5.0\todoApp.csproj.AssemblyReference.cache
 D:\ProChallenges\todoApp\todoApp\obj\Debug\net5.0\todoApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\ProChallenges\todoApp\todoApp\obj\Debug\net5.0\todoApp.AssemblyInfoInputs.cache
 D:\ProChallenges\todoApp\todoApp\obj\Debug\net5.0\todoApp.AssemblyInfo.cs

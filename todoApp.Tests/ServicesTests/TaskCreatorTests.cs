@@ -16,7 +16,7 @@ namespace ServicesTests
             const string TASK_DESCRIPTION = "Test Description";
 
             var nextYear = DateTime.Now.Year + 1;
-            DateTime taskNotificationTime = new DateTime(nextYear, 01, 01, 00, 00, 00);
+            DateTime taskNotificationTime = new(nextYear, 01, 01, 00, 00, 00);
             ICreator taskCreator = new TaskCreator(); 
 
             // Act
@@ -36,7 +36,7 @@ namespace ServicesTests
             const string TASK_DESCRIPTION = "Test Description";
 
             var nextYear = DateTime.Now.Year + 1;
-            DateTime taskNotificationTime = new DateTime(nextYear, 01, 01, 00, 00, 00);
+            DateTime taskNotificationTime = new(nextYear, 01, 01, 00, 00, 00);
             ICreator taskCreator = new TaskCreator();
 
             // Assert
@@ -54,7 +54,7 @@ namespace ServicesTests
             const string TASK_DESCRIPTION = null;
 
             var nextYear = DateTime.Now.Year + 1;
-            DateTime taskNotificationTime = new DateTime(nextYear, 01, 01, 00, 00, 00);
+            DateTime taskNotificationTime = new(nextYear, 01, 01, 00, 00, 00);
             ICreator taskCreator = new TaskCreator();
 
             // Assert
@@ -70,7 +70,7 @@ namespace ServicesTests
             // Arrange
             string TASK_NAME = "";
             const string TASK_DESCRIPTION = "";
-            DateTime taskNotificationTime = new DateTime(2020, 01, 01, 00, 00, 00);
+            DateTime taskNotificationTime = new(2020, 01, 01, 00, 00, 00);
             ICreator taskCreator = new TaskCreator();
 
             // Assert
