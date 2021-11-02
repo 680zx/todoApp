@@ -1,9 +1,8 @@
 using System;
 using NUnit.Framework;
-using Services;
 using Services.Interfaces;
 
-namespace ServicesTests
+namespace Services.Tests
 {
     [TestFixture]
     class TaskCreatorTests
