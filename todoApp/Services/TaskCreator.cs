@@ -6,7 +6,7 @@ namespace Services
 {
     public class TaskCreator : ICreator
     {
-        public UserTask Create(string taskName, string taskDescription, DateTime taskTime)
+        public UserTask Create(int id, string taskName, string taskDescription, DateTime taskTime)
         {
             if (taskName == null)
                 throw new ArgumentNullException(taskName, "Param [taskName] is null.");
@@ -19,6 +19,7 @@ namespace Services
 
             return new UserTask
             {
+                Id = id,
                 Name = taskName,
                 Description = taskDescription,
                 NotificationTime = taskTime

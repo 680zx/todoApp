@@ -3,7 +3,6 @@ using NUnit.Framework;
 using Entities;
 using Moq;
 using todoApp.DAL.Interfaces;
-using todoApp.BL.Interfaces;
 using todoApp.BL;
 
 namespace BL.Tests
@@ -12,7 +11,6 @@ namespace BL.Tests
     class ManagerTests
     {
         private UserTask _task;
-        private IManager _manager;
 
         [SetUp]
         public void Init()
