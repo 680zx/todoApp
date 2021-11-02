@@ -12,5 +12,7 @@ namespace todoApp.DAL.Interfaces
         public void Delete(int id);
 
         public UserTask GetById(int id);
+
+        public IEnumerable<UserTask> GetAll();
     }
 }

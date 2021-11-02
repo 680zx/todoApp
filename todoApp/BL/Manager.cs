@@ -1,9 +1,5 @@
 ﻿using Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using todoApp.BL.Interfaces;
 using todoApp.DAL.Interfaces;
 
@@ -23,24 +19,24 @@ namespace todoApp.BL
             _repository.Add(task);
         }
 
-        public void Delete(int id)
+        public void Update(UserTask task)
         {
-            throw new NotImplementedException();
+            _repository.Update(task);
         }
 
-        public IEnumerable<UserTask> GetAll()
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _repository.Delete(id);
         }
 
         public UserTask GetById(int id)
         {
-            throw new NotImplementedException();
+            return _repository.GetById(id);
         }
 
-        public void Update(UserTask task)
+        public IEnumerable<UserTask> GetAll()
         {
-            throw new NotImplementedException();
-        }
+            return _repository.GetAll();
+        }        
     }
 }
