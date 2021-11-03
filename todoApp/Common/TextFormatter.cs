@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using todoApp.Common.Interfaces;
 
 namespace todoApp.Common
@@ -19,7 +15,7 @@ namespace todoApp.Common
         public string Format(string text)
         {
             string[] words = text.Split(" ");
-            var formattedString = new StringBuilder();
+            var formattedText = new StringBuilder();
             var currentStringLine = new StringBuilder();
 
             // used for adding last current string line to the formatted string
@@ -34,8 +30,8 @@ namespace todoApp.Common
                 {
                     // remove last gap character because it's useless
                     currentStringLine.Remove(currentStringLine.Length - 1, 1);
-                    formattedString.Append(currentStringLine);
-                    formattedString.Append("\n");
+                    formattedText.Append(currentStringLine);
+                    formattedText.Append("\n");
                     currentStringLine.Clear();
                 }
                 
@@ -45,11 +41,11 @@ namespace todoApp.Common
                 if (wordCounter == words.Length)
                 {
                     currentStringLine.Remove(currentStringLine.Length - 1, 1);
-                    formattedString.Append(currentStringLine);
+                    formattedText.Append(currentStringLine);
                 }
             }
 
-            return formattedString.ToString();
+            return formattedText.ToString();
         }
     }
 }

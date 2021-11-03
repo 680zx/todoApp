@@ -1,7 +1,7 @@
 ﻿using System;
-using todoApp.Services.Interfaces;
+using Services.Interfaces;
 
-namespace todoApp.Services
+namespace Services
 {
     public class ConsoleUserReader : IUserInputReader
     {

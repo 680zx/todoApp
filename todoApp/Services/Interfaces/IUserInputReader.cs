@@ -1,4 +1,4 @@
-﻿namespace todoApp.Services.Interfaces
+﻿namespace Services.Interfaces
 {
     public interface IUserInputReader
     {
