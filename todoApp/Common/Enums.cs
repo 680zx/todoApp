@@ -3,7 +3,8 @@
     public enum AppStatus
     {
         MainMenu = 0,
-        ShowTask = 1,
-        CreateTask = 2
+        ShowSingleTaskMenu = 1,
+        ShowAllTasksMenu = 2,
+        CreateTaskMenu = 3
     }
 }

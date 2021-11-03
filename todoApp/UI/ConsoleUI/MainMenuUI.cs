@@ -3,7 +3,7 @@ using todoApp.UI.Interfaces;
 
 namespace todoApp.UI.ConsoleUI
 {
-    public class MainMenuUi : IUserInterface
+    public class MainMenuUI : IUserInterface
     {
         public void Show()
         {

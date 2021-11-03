@@ -1,5 +1,6 @@
 ﻿using Entities;
 using System.Collections.Generic;
+using System.Linq;
 using todoApp.DAL.Interfaces;
 
 namespace todoApp.DAL
@@ -25,7 +26,7 @@ namespace todoApp.DAL
 
         public UserTask GetById(int id)
         {
-            return _userTasks[id];
+            return _userTasks.Where(i => i.Id == id).FirstOrDefault();
         }
 
         public void Update(UserTask task)

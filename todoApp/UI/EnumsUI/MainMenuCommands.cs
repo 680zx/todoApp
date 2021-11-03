@@ -1,6 +1,6 @@
 ﻿namespace todoApp.UI.EnumsUI
 {
-    public enum CommandsUI
+    public enum MainMenuCommands
     {
         AddTask = 0,
         RemoveTask = 1,
