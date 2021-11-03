@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Services;
 using Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using todoApp.BL;
 using todoApp.BL.Interfaces;
@@ -9,13 +10,14 @@ using todoApp.Common.Interfaces;
 using todoApp.DAL;
 using todoApp.DAL.Interfaces;
 using todoApp.UI;
+using todoApp.UI.EnumsUI;
 using todoApp.UI.Interfaces;
 
 namespace todoApp
 {
     public class App
     {
-        #region settings
+        #region const settings
 
         private const int MAX_TASK_DESCRIPTION_WIDTH = 64;
 
@@ -27,11 +29,12 @@ namespace todoApp
         private IManager manager;
         private ICreator taskCreator;
         private IUserInputReader userInputReader;
+        private AppStatus Status;
 
         private void Init()
         {
             ITextFormatter textFormatter = new TextFormatter(MAX_TASK_DESCRIPTION_WIDTH);
-            _app.userInterface = new ConsoleUserInterface(textFormatter);
+            //_app.userInterface = new ConsoleUserInterface(textFormatter);
             _app.repository = new InMemoryRepository();
             _app.manager = new Manager(repository);
             _app.taskCreator = new TaskCreator();
@@ -39,10 +42,32 @@ namespace todoApp
         }
 
         public static void Main(string[] args)
-        {            
+        {
             _app.Init();
+            _app.Status = AppStatus.MainMenu;
 
-            var task = new UserTask
+            while (true)
+            {
+                var userInput = _app.ReadInput();
+
+                if (_app.Status == AppStatus.MainMenu && !_app.isContinue(userInput))
+                {
+                    break;
+                }
+            }
+        }
+
+        private string ReadInput() => _app.userInputReader.Read();
+
+        private bool isContinue(string userInput)
+        {
+            Int32.TryParse(userInput, out int userMainMenuCommand);
+            return userMainMenuCommand != (int)CommandsUI.Quit;
+        }
+    }
+}
+
+/*  var task = new UserTask
             {
                 Id = 1,
                 Name = "Create App",
@@ -79,6 +104,4 @@ namespace todoApp
 
             _app.userInterface.ShowTask(task);
             _app.userInterface.ShowAllTasks(tasksList);
-        }
-    }
-}
+         */
