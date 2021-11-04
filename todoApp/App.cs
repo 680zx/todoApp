@@ -2,7 +2,6 @@
 using Services;
 using Services.Interfaces;
 using System;
-using System.Collections.Generic;
 using todoApp.BL;
 using todoApp.BL.Interfaces;
 using todoApp.Common;
@@ -11,7 +10,6 @@ using todoApp.DAL;
 using todoApp.DAL.Interfaces;
 using todoApp.UI.ConsoleUi;
 using todoApp.UI.ConsoleUI;
-using todoApp.UI.EnumsUI;
 using todoApp.UI.Interfaces;
 
 namespace todoApp

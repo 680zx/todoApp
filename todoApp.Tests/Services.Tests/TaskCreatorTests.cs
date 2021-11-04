@@ -11,7 +11,6 @@ namespace Services.Tests
         public void Create_CorrectValues_CorrectTaskReturned()
         {
             // Arrange
-            const int TASK_ID = 0;
             const string TASK_NAME = "TestTask";
             const string TASK_DESCRIPTION = "Test Description";
 
@@ -20,7 +19,7 @@ namespace Services.Tests
             ICreator taskCreator = new TaskCreator(); 
 
             // Act
-            var result = taskCreator.Create(TASK_ID, TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
+            var result = taskCreator.Create(TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
 
             // Assert
             Assert.AreEqual(result.Name, TASK_NAME);
@@ -32,7 +31,6 @@ namespace Services.Tests
         public void Create_NameIsNull_ExceptionThrown()
         {
             // Arrange
-            const int TASK_ID = 0;
             string TASK_NAME = null;
             const string TASK_DESCRIPTION = "Test Description";
 
@@ -43,7 +41,7 @@ namespace Services.Tests
             // Assert
             Assert.Throws<ArgumentNullException>(() =>
             {
-                taskCreator.Create(TASK_ID, TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
+                taskCreator.Create(TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
             });          
         }
 
@@ -51,7 +49,6 @@ namespace Services.Tests
         public void Create_DescIsNull_ExceptionThrown()
         {
             // Arrange
-            const int TASK_ID = 0;
             string TASK_NAME = "";
             const string TASK_DESCRIPTION = null;
 
@@ -62,7 +59,7 @@ namespace Services.Tests
             // Assert
             Assert.Throws<ArgumentNullException>(() =>
             {
-                taskCreator.Create(TASK_ID, TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
+                taskCreator.Create(TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
             });
         }
 
@@ -70,7 +67,6 @@ namespace Services.Tests
         public void Create_NotificationTimeLessThanCurrentOne_ExceptionThrown()
         {
             // Arrange
-            const int TASK_ID = 0;
             string TASK_NAME = "";
             const string TASK_DESCRIPTION = "";
             DateTime taskNotificationTime = new(2020, 01, 01, 00, 00, 00);
@@ -79,7 +75,7 @@ namespace Services.Tests
             // Assert
             Assert.Throws<ArgumentException>(() =>
             {
-                taskCreator.Create(TASK_ID, TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
+                taskCreator.Create(TASK_NAME, TASK_DESCRIPTION, taskNotificationTime);
             });
         }
     }
