@@ -16,7 +16,7 @@ namespace todoApp.DAL
 
         public void Delete(int id)
         {
-            _userTasks.RemoveAt(id);
+            _userTasks.Remove(GetById(id));
         }
 
         public IEnumerable<UserTask> GetAll()

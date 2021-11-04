@@ -26,9 +26,11 @@ namespace todoApp
 
         private static App _app = new App();
         private IUserInterface mainMenuUI;
+        private IUserInterface removeTaskMenuUI;
         private ISingleObjectUI<UserTask> singleObjectUI;
         private IMultipleObjectsUI<UserTask> multipleObjectsUI;
         private IShowMessageUI showMessageUI;
+        private TaskCreatorMenuUI taskCreatorMenuUI;
         private IRepository repository;
         private IManager manager;
         private ICreator taskCreator;
@@ -42,6 +44,8 @@ namespace todoApp
             _app.showMessageUI = new ShowMessageUI();
             _app.singleObjectUI = new SingleTaskUI(textFormatter);
             _app.multipleObjectsUI = new MultiTasksUI(textFormatter);
+            _app.taskCreatorMenuUI = new TaskCreatorMenuUI();
+            _app.removeTaskMenuUI = new RemoveTaskMenuUI();
             _app.repository = new InMemoryRepository();
             _app.manager = new Manager(repository);
             _app.taskCreator = new TaskCreator();
@@ -67,28 +71,34 @@ namespace todoApp
             };
 
             #endregion
-            _app.repository.Add(task);
 
             _app.Init();
             _app.DrawMainMenu();
+            _app.repository.Add(task);
 
             while (isContinue)
             {
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.D1:
+                        _app.DrawAddTaskMenu();
                         break;
                     case ConsoleKey.D2:
+                        _app.DrawTaskRemoverMenu();
                         break;
                     case ConsoleKey.D3:
                         _app.DrawSingleTaskMenu();
                         break;
                     case ConsoleKey.D4:
+                        _app.DrawMultiTasksMenu();
+                        break;
+                    case ConsoleKey.D5:
                         isContinue = false;
                         break;
                     default:
                         break;
                 }
+                _app.DrawMainMenu();
             }
         }
 
@@ -100,6 +110,31 @@ namespace todoApp
             _app.Status = AppStatus.MainMenu;
         }
 
+        private void DrawAddTaskMenu()
+        {
+            _app.showMessageUI.Show("Task creation menu. Please fill all fields.\n");
+
+            _app.taskCreatorMenuUI.ShowTaskNameInput(1, 2);
+            var taskName = ReadInput();
+
+            _app.taskCreatorMenuUI.ShowDateInput(15, 2);
+            DateTime.TryParse(ReadInput(), out DateTime taskDate);
+
+            _app.taskCreatorMenuUI.ShowDescriptionInput(1, 4);
+            var taskDesc = ReadInput();
+
+            var newTask = _app.taskCreator.Create(taskName, taskDesc, taskDate);
+            _app.repository.Add(newTask);
+        }
+
+        private void DrawTaskRemoverMenu()
+        {
+            _app.showMessageUI.Show("To delete a task, enter the task ID");
+            _app.removeTaskMenuUI.Show();
+            Int32.TryParse(ReadInput(), out int id);
+            _app.repository.Delete(id);
+        }
+
         private void DrawSingleTaskMenu()
         {
             _app.showMessageUI.Show("Enter task id to show: ");
@@ -109,8 +144,9 @@ namespace todoApp
             _app.Status = AppStatus.ShowSingleTaskMenu;
         }
 
-        private void DrawMultiTasksMenu(IEnumerable<UserTask> tasks)
+        private void DrawMultiTasksMenu()
         {
+            var tasks = _app.repository.GetAll();
             _app.multipleObjectsUI.Show(tasks);
             _app.Status = AppStatus.ShowAllTasksMenu;
         }
