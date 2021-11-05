@@ -22,7 +22,7 @@ namespace todoApp
 
         #endregion
 
-        private static App _app = new App();
+        private static readonly App _app = new App();
         private IUserInterface mainMenuUI;
         private IUserInterface removeTaskMenuUI;
         private ISingleObjectUI<UserTask> singleObjectUI;
@@ -48,7 +48,7 @@ namespace todoApp
             _app.manager = new Manager(repository);
             _app.taskCreator = new TaskCreator();
             _app.userInputReader = new ConsoleUserReader();
-            
+            Console.CursorVisible = false;            
         }
 
         public static void Main(string[] args)
@@ -112,13 +112,13 @@ namespace todoApp
         {
             _app.showMessageUI.Show("Task creation menu. Please fill all fields.\n");
 
-            _app.taskCreatorMenuUI.ShowTaskNameInput(1, 2);
+            _app.taskCreatorMenuUI.ShowTaskNameInput(30, 3);
             var taskName = ReadInput();
 
-            _app.taskCreatorMenuUI.ShowDateInput(15, 2);
+            _app.taskCreatorMenuUI.ShowDateInput(60, 3);
             DateTime.TryParse(ReadInput(), out DateTime taskDate);
 
-            _app.taskCreatorMenuUI.ShowDescriptionInput(1, 4);
+            _app.taskCreatorMenuUI.ShowDescriptionInput(35, 5);
             var taskDesc = ReadInput();
 
             var newTask = _app.taskCreator.Create(taskName, taskDesc, taskDate);
@@ -135,7 +135,7 @@ namespace todoApp
 
         private void DrawSingleTaskMenu()
         {
-            _app.showMessageUI.Show("Enter task id to show: ");
+            _app.showMessageUI.Show("Enter the id to show the task: ");
             Int32.TryParse(ReadInput(), out int taskId);
             var task = _app.repository.GetById(taskId);
             _app.singleObjectUI.Show(task);

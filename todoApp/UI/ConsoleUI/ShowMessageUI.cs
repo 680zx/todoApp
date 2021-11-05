@@ -7,6 +7,7 @@ namespace todoApp.UI.ConsoleUI
     {
         public void Show(string message)
         {
+            Console.SetCursorPosition(35, 1);
             Console.WriteLine("Attention: " + message);
         }
     }

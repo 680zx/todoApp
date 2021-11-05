@@ -7,6 +7,7 @@ namespace todoApp.UI.ConsoleUI
     {
         public void Show()
         {
+            Console.SetCursorPosition(20, 4);
             Console.Write("Task ID: ");
         }
     }

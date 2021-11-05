@@ -15,8 +15,10 @@ namespace todoApp.UI.ConsoleUI
 
         protected void Show(UserTask task)
         {
+            Console.SetCursorPosition(20, 4);
             Console.WriteLine($"{task.Id}. Task: {task.Name}\tDate: {task.NotificationTime:g}");
-            Console.WriteLine();
+
+            Console.SetCursorPosition(20, 6);
             Console.WriteLine(_textFormatter.Format(task.Description));
         }
     }

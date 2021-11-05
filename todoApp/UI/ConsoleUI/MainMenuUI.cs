@@ -7,11 +7,13 @@ namespace todoApp.UI.ConsoleUI
     {
         public void Show()
         {
-            Console.WriteLine("1. Add Task");
-            Console.WriteLine("2. Remove Task");
-            Console.WriteLine("3. Show");
-            Console.WriteLine("4. Show All");
-            Console.WriteLine("5. Quit");
+            Console.Clear();
+            
+            Console.WriteLine("\n\t1. Add Task");
+            Console.WriteLine("\t2. Remove Task");
+            Console.WriteLine("\t3. Show");
+            Console.WriteLine("\t4. Show All");
+            Console.WriteLine("\t5. Quit");
         }
     }
 }
